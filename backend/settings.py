@@ -9,7 +9,7 @@ SECRET_KEY = "65!5(6pc9ud!r23+m4dg7w=#8h4_t^pscx!@m89k6+s)!cwg5x"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://django-bugschat.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
