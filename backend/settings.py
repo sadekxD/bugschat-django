@@ -9,7 +9,11 @@ SECRET_KEY = "65!5(6pc9ud!r23+m4dg7w=#8h4_t^pscx!@m89k6+s)!cwg5x"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://django-bugschat.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "https://django-bugschat.herokuapp.com",
+    "127.0.0.1",
+    "https://sadekxd.github.io/bugschat-django",
+]
 
 
 # Application definition
@@ -68,22 +72,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 ASGI_APPLICATION = "backend.asgi.application"
-# CHANNEL_LAYERS = {
-#     "default": {
-#         "BACKEND": "channels_redis.core.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [("127.0.0.1", 6379)],
-#         },
-#     },
-# }
-
-redis_host = os.environ.get("REDIS_HOST", "localhost")
 
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [(redis_host, 6379)],
+            "hosts": [("127.0.0.1", 6379)],
         },
     },
 }
