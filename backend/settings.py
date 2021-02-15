@@ -1,4 +1,5 @@
 import os
+import django_heroku
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -141,3 +142,6 @@ ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_VERIFICATION = "none"
 CSRF_COOKIE_NAME = "csrftoken"
+
+
+django_heroku.settings(locals())
